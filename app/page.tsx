@@ -1,3 +1,10 @@
+import Navigation from "../components/navigation";
+
 export default function Page() {
-  return <h1>The New York Times Best Seller Explorer</h1>;
+  return (
+    <div>
+      <Navigation />
+      <h1>The New York Times Best Seller Explorer</h1>
+    </div>
+  );
 }
