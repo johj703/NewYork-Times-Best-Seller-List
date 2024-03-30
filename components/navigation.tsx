@@ -5,10 +5,10 @@ export default function Navigation() {
     <nav>
       <ul>
         <li>
-          <Link herf="/">Home</Link>
+          <Link href="/">Home</Link>
         </li>
         <li>
-          <Link herf="/about">About</Link>
+          <Link href="/about">About</Link>
         </li>
       </ul>
     </nav>
