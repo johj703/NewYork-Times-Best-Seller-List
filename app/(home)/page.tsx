@@ -5,6 +5,7 @@ export const metadata = {
 const URL = "https://books-api.nomadcoders.workers.dev/lists";
 
 async function getLists() {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   const response = await fetch(URL);
   const json = await response.json();
   return json;
