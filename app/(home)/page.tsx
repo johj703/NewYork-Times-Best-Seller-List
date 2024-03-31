@@ -10,7 +10,8 @@ async function getLists() {
   return json;
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const lists = await getLists();
   return (
     <div>
       <h1>The New York Times Best Seller Explorer</h1>
