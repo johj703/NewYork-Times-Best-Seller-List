@@ -4,7 +4,7 @@ import Navigation from "../components/navigation"
 export const metadata: Metadata = {
   title: {
     template: "%s | NewYork-Times-Best-Seller-List",
-    default: "Loading!"
+    default: "Best Seller List!"
   },
   description: 'This is NewYork-Times-Best-Seller-List',
 }
