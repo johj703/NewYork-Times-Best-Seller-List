@@ -4,7 +4,7 @@ export const metadata = {
   title: "Home",
 };
 
-const URL = "https://books-api.nomadcoders.workers.dev/lists";
+export const URL = "https://books-api.nomadcoders.workers.dev/lists";
 
 async function getLists() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
