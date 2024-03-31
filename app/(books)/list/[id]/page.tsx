@@ -1,7 +1,7 @@
 import { BASE_URL } from "../../../api-path";
 
 async function getBooks(name: string) {
-  const response = await fetch(`${BASE_URL}/name=${name}`);
+  const response = await fetch(`${BASE_URL}/${name}`);
   return response.json();
 }
 
