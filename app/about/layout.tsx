@@ -1,4 +1,4 @@
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function AboutLayout({children}: {children: React.ReactNode}) {
   return (
     <div>
         {children}
