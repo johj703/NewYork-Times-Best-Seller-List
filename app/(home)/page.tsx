@@ -1,20 +1,22 @@
+"use client";
 import { useEffect, useState } from "react";
 
-export const metadata = {
-  title: 'Home',
-}
-
 export default function Page() {
-  const [movies, setMovies] = useState();
+  const [lists, setLists] = useState();
   const getList = async () => {
-    fetch("")
-  }
+    const response = await fetch(
+      "https://books-api.nomadcoders.workers.dev/lists"
+    );
+    const json = await response.json();
+    setLists(json);
+  };
   useEffect(() => {
     getList();
-  })
+  });
   return (
     <div>
       <h1>The New York Times Best Seller Explorer</h1>
+      {JSON.stringify(lists)}
     </div>
   );
 }
