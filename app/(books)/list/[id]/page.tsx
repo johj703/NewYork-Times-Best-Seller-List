@@ -1,3 +1,7 @@
-export default function BookDetail({params: {id}}: {params: {id: string}}) {
-    return <h1>Book! {id}</h1>
+export default async function BookDetail({
+  params: { id },
+}: {
+  params: { id: string };
+}) {
+  return <h1>Book! {id}</h1>;
 }
