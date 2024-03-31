@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Home",
 };
@@ -8,7 +10,7 @@ async function getLists() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   const response = await fetch(URL);
   const json = await response.json();
-  return json;
+  return json.results;
 }
 
 export default async function HomePage() {
@@ -16,7 +18,11 @@ export default async function HomePage() {
   return (
     <div>
       <h1>The New York Times Best Seller Explorer</h1>
-      {JSON.stringify(lists)}
+      {lists.map((list) => (
+        <li key={list.primary_isbn10}>
+          <Link href={`/lists/${list.primary_isbn10}`}>{list.list_name}</Link>
+        </li>
+      ))}
     </div>
   );
 }
